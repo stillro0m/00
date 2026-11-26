@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko" style="background:#0a0a0a;color-scheme:dark;">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#0a0a0a" />
+<meta name="color-scheme" content="dark" />
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+<meta name="googlebot" content="noindex, nofollow" />
+<meta name="referrer" content="no-referrer" />
+<title>stillro0m</title>
+<link rel="canonical" href="https://stillro0m.github.io/00/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="stillro0m" />
+<meta property="og:description" content="the archives of lzxna" />
+<meta property="og:url" content="https://stillro0m.github.io/00/" />
+<meta property="og:image" content="https://stillro0m.github.io/00/og-image.jpg" />
+<meta property="og:image:secure_url" content="https://stillro0m.github.io/00/og-image.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="stillro0m — lzxna" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="stillro0m" />
+<meta name="twitter:description" content="the archives of lzxna" />
+<meta name="twitter:image" content="https://stillro0m.github.io/00/og-image.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500&family=Geist:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #0a0a0a;
+    --bg-elev: #141414;
+    --ink: #f5f3ee;
+    --ink-soft: #c9c5bb;
+    --ink-mute: #8a8479;
+    --ink-faint: #555049;
+    --line: #2a2722;
+    --line-soft: #1c1a17;
+    --safe-top: env(safe-area-inset-top, 0px);
+    --safe-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  ::selection { background: var(--ink); color: var(--bg); }
+  html, body { background: #0a0a0a !important; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; min-height: 100%; }
+  body {
+    font-family: 'Geist', -apple-system, sans-serif;
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    min-height: 100dvh;
+    position: relative;
+    overflow-x: hidden;
+    overscroll-behavior-y: none;
+  }
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.5'/></svg>");
+    opacity: 0.04;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    z-index: 1;
+  }
+  .container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-top: var(--safe-top);
+    background: #0a0a0a;
+  }
+  .archive-emblem {
+    width: 22px;
+    height: 22px;
+    display: block;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+  .view { display: block; animation: fadeUp 0.5s ease-out; }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  /* ARCHIVES */
+  .archive-page { padding: 110px 0 48px; }
+  .archive-header {
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 32px;
+    margin-bottom: 0;
+  }
+  .log-list li:first-child .log-row { padding-top: 22px; }
+  .archive-title {
+    font-family: 'Geist', sans-serif;
+    font-weight: 500;
+    font-size: clamp(32px, 9vw, 44px);
+    letter-spacing: -0.035em;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .archive-title .serif {
+    font-family: 'Instrument Serif', serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  .archive-subtitle {
+    font-family: 'Instrument Serif', serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(16px, 4.5vw, 22px);
+    letter-spacing: 0.025em;
+    line-height: 1.2;
+    color: var(--ink);
+    opacity: 0.5;
+  }
+  .log-list { list-style: none; }
+  .log-entry {
+    display: block;
+    border-bottom: 1px solid var(--line);
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.2s ease, padding 0.25s ease;
+  }
+  .log-entry:hover {
+    background: var(--bg-elev);
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .log-row {
+    padding: 26px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 64px;
+  }
+  .log-row-left { flex: 1; min-width: 0; }
+  .log-id {
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-mute);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .log-title {
+    font-family: 'Geist', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    margin-bottom: 10px;
+  }
+  .log-title .serif {
+    font-family: 'Instrument Serif', serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  .log-date {
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-faint);
+    letter-spacing: 0.08em;
+  }
+  .log-arrow {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6px;
+    color: var(--ink-mute);
+    transition: color 0.25s ease, transform 0.25s ease;
+  }
+  .log-arrow svg { width: 18px; height: 18px; display: block; }
+  .log-entry:hover .log-arrow {
+    color: var(--ink);
+    transform: translateX(4px);
+  }
+  /* FOOTER */
+  .foot {
+    padding: 14px 0 36px;
+    margin-top: 4px;
+    font-family: 'Geist Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.12em;
+    color: var(--ink-mute);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <section class="view view-archives active" id="archives" aria-labelledby="archive-title">
+      <main class="archive-page">
+        <header class="archive-header">
+          <svg class="archive-emblem" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
+          <path d="M 50 4 Q 51.5 4, 52 5 C 51 30, 70 49, 95 48 Q 96 48.5, 96 50 Q 96 51.5, 95 52 C 70 51, 51 70, 52 95 Q 51.5 96, 50 96 Q 48.5 96, 48 95 C 49 70, 30 51, 5 52 Q 4 51.5, 4 50 Q 4 48.5, 5 48 C 30 49, 49 30, 48 5 Q 48.5 4, 50 4 Z"/>
+        </svg>
+          <h1 class="archive-title" id="archive-title"><span class="serif">stillro0m</span></h1>
+          <p class="archive-subtitle">lzxna</p>
+        </header>
+        <ul class="log-list">
+          <!-- Article links -->
+          <li>
+            <a class="log-entry" data-story-id="01" href="https://stillro0m.github.io/01/">
+              <div class="log-row">
+                <div class="log-row-left">
+                  <div class="log-id">#01</div>
+                  <h2 class="log-title">집</h2>
+                  <div class="log-date">2026.11.20</div>
+                </div>
+                <span class="log-arrow" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+                </span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="log-entry" data-story-id="02" href="https://stillro0m.github.io/02/">
+              <div class="log-row">
+                <div class="log-row-left">
+                  <div class="log-id">#02</div>
+                  <h2 class="log-title">쓸모를 초과하는 것들</h2>
+                  <div class="log-date">2026.11.26</div>
+                </div>
+                <span class="log-arrow" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+                </span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </main>
+    </section>
+    <footer class="foot">
+      <span>© 2026 lzxna. All rights reserved.</span>
+    </footer>
+  </div>
+  <script>
+    if (location.hash === '#archives') {
+      window.addEventListener('load', () => window.scrollTo(0, 0), { once: true });
+    }
+  </script>
+</body>
+</html>
